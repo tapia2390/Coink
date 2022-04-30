@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/sp30"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logo" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sp15"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/the_piggy_bank"
+            android:textColor="@color/txt_application_color"
+            android:textSize="@dimen/sp20"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sp30"/>
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_rounded_green"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_dark_greenish_blue"/>
+
+    </LinearLayout>
+</layout>
+
