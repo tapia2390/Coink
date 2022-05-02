@@ -148,8 +148,15 @@ public class RegisterAccountDataActivity extends Activity {
     private void showAlertDialogDate(View view, int num) {
 
         Calendar calendar = Calendar.getInstance();
-        int yil = calendar.get(calendar.YEAR);
-        int ay = calendar.get(calendar.MONTH);
+        int yil = 0;
+        if(num == 1){
+             yil = calendar.get(calendar.YEAR)-18;
+        }else{
+            yil = calendar.get(calendar.YEAR);
+        }
+
+        int ay =  calendar.get(calendar.MONTH);
+
         int gun = calendar.get(calendar.DAY_OF_MONTH);
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(RegisterAccountDataActivity.this, new DatePickerDialog.OnDateSetListener() {
@@ -228,7 +235,7 @@ public class RegisterAccountDataActivity extends Activity {
         builder.setTitle(getString(R.string.txt_select));
 
         // add a list
-        String[] document = new String[documentTypesList.size()]; //{"horse", "cow", "camel", "sheep", "goat"};
+        String[] document = new String[documentTypesList.size()];
 
         for (int i = 0; i <= documentTypesList.size() - 1; i++) {
             document[i] = documentTypesList.get(i).getNotation();
@@ -254,8 +261,7 @@ public class RegisterAccountDataActivity extends Activity {
         builder.setTitle("Selecione");
 
         // add a list
-        String[] gender = new String[gendersList.size()]; //{"horse", "cow", "camel", "sheep", "goat"};
-
+        String[] gender = new String[gendersList.size()];
         for (int i = 0; i <= gendersList.size() - 1; i++) {
             gender[i] = gendersList.get(i).getName();
 
