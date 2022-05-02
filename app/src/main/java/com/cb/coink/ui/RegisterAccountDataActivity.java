@@ -20,6 +20,8 @@ import com.cb.coink.R;
 import com.cb.coink.databinding.ActivityRegisterAccountDataBinding;
 import com.cb.coink.model.DocumentTypes;
 import com.cb.coink.model.Genders;
+import com.cb.coink.model.Modelo;
+import com.cb.coink.model.Person;
 import com.cb.coink.retrofit.MyApiAdapter;
 
 import java.util.ArrayList;
@@ -33,8 +35,10 @@ import retrofit2.Response;
 
 public class RegisterAccountDataActivity extends Activity {
     private ActivityRegisterAccountDataBinding binding;
+    Modelo modelo = Modelo.getInstance();
     String apiKey = "030106";
     boolean flag = false;
+    String cellphone ="";
     ArrayList<DocumentTypes> documentTypesList = new ArrayList<DocumentTypes>();
     ArrayList<Genders> gendersList = new ArrayList<Genders>();
 
@@ -47,6 +51,13 @@ public class RegisterAccountDataActivity extends Activity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register_account_data);
 
+
+
+        Bundle parametros = this.getIntent().getExtras();
+        if(parametros !=null){
+             cellphone = parametros.getString("cellphone");
+
+        }
 
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +102,19 @@ public class RegisterAccountDataActivity extends Activity {
         binding.layoutPersonalInformation.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                modelo.person = new Person(
+                        cellphone,
+                        binding.layoutPersonalInformation.optionDocumentType.getText().toString(),
+                        binding.layoutPersonalInformation.txtxDocumentNumber.getText().toString(),
+                        binding.layoutPersonalInformation.txtDate.getText().toString(),
+                        binding.layoutPersonalInformation.txtDateOfBirth.getText().toString(),
+                        binding.layoutPersonalInformation.optionGender.getText().toString(),
+                        binding.layoutPersonalInformation.txtEmail.getText().toString(),
+                        binding.layoutPersonalInformation.txtPin.getText().toString()
+
+                        );
+
 
                 Intent intent = new Intent(getApplicationContext(), FinalizeActivity.class);
                 startActivity(intent);

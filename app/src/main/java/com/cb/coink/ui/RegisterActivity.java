@@ -130,6 +130,7 @@ public class RegisterActivity extends Activity {
             public void onClick(View view) {
                 if (binding.cellPhoneNumber.getText().toString().length() == 10) {
                     Intent intent = new Intent(getApplicationContext(), RegisterAccountDataActivity.class);
+                    intent.putExtra("cellphone", binding.cellPhoneNumber.getText().toString());
                     startActivity(intent);
                     overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
 
