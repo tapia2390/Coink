@@ -34,9 +34,8 @@
                     android:textSize="@dimen/sp18"
                     android:textStyle="bold" />
 
-
                 <com.google.android.material.textfield.TextInputLayout
-                    
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/document_type"
@@ -44,18 +43,19 @@
                     app:endIconMode="dropdown_menu">
 
                     <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/option_document_type"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:editable="false"
                         android:focusable="false"
                         android:paddingLeft="@dimen/sp10"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/document_number"
@@ -63,16 +63,18 @@
                     app:endIconMode="clear_text">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtx_document_number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:maxLength="20"
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/document_issue_date"
@@ -80,15 +82,18 @@
                     app:endIconMode="clear_text">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
                         android:inputType="date"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/date_birth"
@@ -96,16 +101,19 @@
                     app:endIconMode="clear_text">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_date_of_birth"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
                         android:inputType="date"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/gender"
@@ -113,12 +121,13 @@
                     app:endIconMode="dropdown_menu">
 
                     <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/option_gender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:editable="false"
                         android:focusable="false"
                         android:paddingLeft="@dimen/sp10"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,6 +142,7 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
@@ -140,15 +150,16 @@
                     app:endIconMode="custom">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/confirm_email"
@@ -156,16 +167,17 @@
                     app:endIconMode="custom">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_comfirm_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/security_pin"
@@ -173,14 +185,17 @@
                     app:endIconMode="password_toggle">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_pin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:inputType="textPassword"
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/confirm_security_pin"
@@ -188,9 +203,11 @@
                     app:endIconMode="password_toggle">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_comfim_pin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/dark_greenish_blue"/>
+                        android:inputType="textPassword"
+                        android:textColor="@color/dark_greenish_blue" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

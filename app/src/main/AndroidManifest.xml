@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cb.coink">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Coink"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.WelComeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.FinalizeActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.RegisterAccountDataActivity"
             android:exported="false" />

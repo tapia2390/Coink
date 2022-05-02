@@ -32,4 +32,11 @@
     <string name="welcome_to_coink"><b>¡Bienvenido a Coink!</b></string>
     <string name="account_created">¡Cuenta creada exitosamente, tu marrano ya está listo para que empieces a ahorrar!</string>
     <string name="txt_continue">CONTINUAR</string>
+    <string name="txt_select">Seleccione</string>
+    <string name="required_field">campo requerido</string>
+    <string name="the_emails_do_not_match">los correos no coinciden</string>
+    <string name="the_passwprd_do_not_match">las contraseñas no coinciden</string>
+    <string name="invalid_email">correo inválido</string>
+    <string name="check_terms">Por favor, acepte los terminos</string>
+
 </resources>
